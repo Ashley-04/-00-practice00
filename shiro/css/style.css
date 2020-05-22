@@ -1,0 +1,439 @@
+@charset "utf-8";
+@import url();
+/* font-family:cursive; */
+
+/* 共通設定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: poppins, sans-serif;
+    color: #2b2b2b;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+section {
+    text-align: center;
+}
+
+.u-content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.u-text {
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+}
+
+
+
+/*header*/
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background: url(../img/header.png);
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+}
+
+.header__nav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+}
+
+.header__nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    padding-top: 60px;
+    font-size: 110px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.header__title__sub {
+    word-spacing: 4px;
+    vertical-align: middle;
+}
+
+.header__title__sub::before,
+.header__title__sub::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin: 0 8px;
+    background: #ffffff;
+    vertical-align: middle;
+}
+
+.header__nav__logo {
+    font-size: 36px;
+}
+
+#nav-input :checked #nav-drawer {
+    position: relative;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+    display: none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+    position: absolute;
+    height: 2px;
+    /*線の太さ*/
+    width: 28px;
+    /*長さ*/
+    background: #fff;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+
+#nav-open span:before {
+    bottom: -8px;
+}
+
+#nav-open span:after {
+    bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+    display: none;
+    /*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    /*全体に広がるように*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /*最前面に*/
+    width: 100%;
+    /*右側に隙間を作る（閉じるカバーを表示）*/
+
+    /*最大幅（調整してください）*/
+    height: 100%;
+    top: 25%;
+    background: #fff;
+    /*背景色*/
+    color: #2b2b2b;
+    font-size: 18px;
+    line-height: 11vh;
+    transition: .3s ease-in-out;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+}
+
+#nav-content li {
+    border-top: 1px solid #ccc;
+}
+
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked~#nav-close {
+    display: block;
+    /*カバーを表示*/
+    opacity: .5;
+}
+
+#nav-input:checked~#nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    /*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+}
+
+
+
+
+/* 最上部の線のスタイル ---------------------- */
+#nav-open span:before .is-active {
+    top: 24px;
+    /* 上から2番目の線の位置に変更 */
+
+    /* 線を45度回転 */
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 上から2番目の線のスタイル ---------------------- */
+#nav-open span .is-active {
+    opacity: 0;
+    /* 不透明度を下げて線を消す */
+}
+
+/* 最下部の線のスタイル ---------------------- */
+#nav-open span:after .is-active {
+    top: 24px;
+    /* 上から2番目の線の位置に変更 */
+
+    /* 線を135度回転 */
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+
+/* concept */
+.u-heading {
+    position: relative;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    padding-top: 80px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.u-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background: #2b2b2b;
+    transform: translateX(-50%);
+}
+
+.u-text {
+    padding-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.4px;
+}
+
+.concept {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(#FFF 70%, #ededed 30%);
+}
+
+.concept__image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* work */
+.work_contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
+    /* 改行不許可 */
+    text-align: left;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+}
+
+.work_contents img {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.work_f,
+.work_s,
+.work_t,
+.work_fo {
+    padding-bottom: 80px;
+}
+
+.work_right {
+    padding-top: 100px;
+}
+
+/* florist */
+
+.florist {
+    background: linear-gradient(#ededed 60%, #fff 40%);
+}
+
+.florist__contents {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+}
+
+.florist img {
+    margin-bottom: 12px;
+}
+
+.florist__contents dt {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+/* shop information */
+.shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.shopimg {
+    padding: 20px;
+}
+
+.shopinformation__table {
+    width: 45%;
+    border-spacing: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    border-collapse: separate;
+    border-spacing: 16px;
+}
+
+
+table th {
+    border-right: 1px solid #a0a0a0;
+    font-weight: normal;
+}
+
+table td {
+    display: block;
+    font-weight: normal;
+}
+
+table tr {
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+/* contactus */
+
+.contact {
+    margin: 0px 0px;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/contactus.png);
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+.btn__contact {
+    position: relative;
+    display: inline-block;
+    width: 360px;
+    padding-left: 40px;
+    height: 80px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    border: 1px solid #a0a0a0;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.btn__contact::before,
+.btn__contact::after {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+}
+
+.btn__contact::before {
+    top: 30px;
+    left: 85px;
+    width: 30px;
+    height: 20px;
+    border: 1px solid #2b2b2b;
+}
+
+.btn__contact::after {
+    top: 21px;
+    left: 90px;
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+    transform: rotate(45deg);
+}
+
+/* footer */
+
+footer {
+    line-height: 40px;
+    letter-spacing: 1.4px;
+    text-align: center;
+    height: 40px;
+}
+
+small {
+    font-size: smaller;
+}
+
+/* 画面の明るさ調整 */
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../img/header.png');
+}
+
+.contact {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+        url('../img/contactus.png');
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 基本設定、設定からformatonでon saveにすると自動でインデント整理 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiro</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__nav">
+      <div class="u-content-wrapper header__nav__wrapper">
+        <div class="header__nav__logo">Shiro</div>
+        <div id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">
+            <ul>
+              <li>Concept</li>
+              <li>Work</li>
+              <li>Florist</li>
+              <li>Shop information</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="u-content-wrapper">
+        <h1 class="header__title">Shiro</h1>
+        <p class="header__title__sub">White flower shop</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- contents -->
+
+  <section class="concept">
+    <div class="u-content-wrapper">
+      <h2 class="u-heading">Concept</h2>
+      <p class="u-text">
+        私たちshiroは、白いお花だけを取り扱うフラワーショップです。
+        <br>色とりどりの花束も素敵だけれど、洗練された「白」の美しさを感じてほしい。
+        <br>「白」に対する愛から生まれた静寂な時間が流れる店へ、ぜひお越しください。
+      </p>
+      <img class="concept__image" src="img/concept.png">
+    </div>
+  </section>
+
+  <!-- work -->
+  <section class="work">
+    <div class="u-content-wrapper">
+      <h2 class="u-heading">work</h2>
+      <p class="u-text">
+        オーダーメイドでのブーケ・アレンジメントのデザインのほか、
+        <br>ウェディングやイベントの装花なども行なっています。
+        <br>一人一人にあったご提案をさせていただきます。
+      </p>
+      <!-- work 中身 -->
+      <div class="work_contents">
+        <div clas="work_left">
+          <div class="work_f">
+            <img src="img/work_gift.png" alt="gift">
+            <dl>
+              <dt>Gift</dt>
+              <dd>
+                花束をお送りしたいお相手、伝えたいお気持ちに合わ<br>せたプレゼント用花束のアレンジメントをさせていた<br>だきます。花言葉などの豆知識もお伝えします。
+              </dd>
+            </dl>
+          </div>
+          <div class="work_s">
+            <img src="img/work_wedding.png" alt="wedding">
+            <dl>
+              <dt>Wedding</dt>
+              <dd>ウエディングドレスに合わせたブーケや式場の雰囲気<br>に合う装花をご提案。お打ち合わせの流れや回数、費<br>用などにつきましてはお問い合わせください。
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="work_right">
+          <div class="work_t">
+            <img src="img/work_decoretion.png" src="deco">
+            <dl>
+              <dt>Decoration</dt>
+              <dd>お写真を彩るお花を一輪から販売。一定期間のご契約<br>で定期的にご自宅へ配送させていただくことも可能で<br>す。
+              </dd>
+            </dl>
+          </div>
+          <div class="work_fo">
+            <img src="img/work_for.png" alt="for">
+            <dl>
+              <dt>For yourself</dt>
+              <dd>お部屋の雰囲気やライフスタイルをお聞きしてご自宅<br>用の花束をご提案し、少しでも長く咲かせるコツもお<br>教えします。花束に合った花瓶をご提案することも可<br>能です。
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- florist -->
+  <section class="florist">
+    <div class="u-content-wrapper">
+      <h2 class="u-heading">florist</h2>
+      <p class="u-text">
+        Shiro専属のフローリストたちをご紹介。
+        <br>得意の分野であなたのオーダーを最大限に叶えます。
+      </p>
+
+      <div class="florist__contents">
+        <dl class="florist-p">
+          <img src="img/florist_shiyu.png" alt="">
+          <dt>Shiyu</dt>
+          <dd>
+            お花茶屋大学フラワーアレンジメント<br>科を卒業後、さまざまな白い花を探す<br>ために世界を一周し、Shiroの創業者<br>となる。
+          </dd>
+        </dl>
+        <dl class="florist-p">
+          <img src="img/florist_mao.png" alt="">
+          <dt>Mao</dt>
+          <dd>花の魅力に惹かれ、空間デザインの世<br>界からフローリストの道を歩む。主に<br>結婚式やイベントで使用するお花のデ<br>ィレクション担当
+          </dd>
+        </dl>
+        <dl class="florist-p">
+          <img src="img/florist_omichan.png" alt="">
+          <dt>Omachan</dt>
+          <dd>
+            フローリスト兼ガーデナーという特殊<br>な経歴をもつ。豊富な知識と技術でお<br>客様のオーダーを叶える。
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- shop -->
+  <section class="shop-information">
+    <div class="u-content-wrapper">
+      <h2 class="u-heading">shop information</h2>
+      <p class="u-text">
+        Shiroの店舗情報をご紹介します。
+      </p>
+      <div class="shop">
+        <img src="img/shop_infoemation.png" alt="" class="shopimg">
+        <table class="shopinformation__table">
+          <tr>
+            <th>住所</th>
+            <td>〒810-0001</td>
+            <td>福岡県福岡市中央区天神0-0-0</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>0120-000-000</td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>11:00-20:30</td>
+            <td>（定休日：水曜日）</td>
+          </tr>
+          <tr>
+            <th>アクセス</th>
+            <td>天神駅12a出口から徒歩6分</td>
+            <td>東京駅8b出口から徒歩12分</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+  </contents>
+
+  <!-- contactus -->
+  <section class="contact">
+    <div class="u-content-wrapper">
+      <h2 class="u-heading">contact us</h2>
+      <p class="u-text">
+        イベントや結婚式でご利用する装花のご相談や、
+        <br>フラワーアレンジメントのご予約などはこちらからお問い合わせください。
+      </p>
+      <p class="btn__contact">
+        <a href="#">お問い合わせ</a></p>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer>
+
+    <small class="footer_c">
+      Copyright © Shiro All Rights Reserved.
+    </small>
+
+  </footer>
+
+  <script src="shiro.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>
